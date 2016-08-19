@@ -1,5 +1,10 @@
 <?php
-require_once "settings.php";
+include_once "settings.php";
+session_start();
+$CONNECT = mysqli_connect(HOST, USER, PASS, DB);
+
+/*if ($CONNECT) echo 'OK';
+    else echo 'ERROR';*/
 
 if ($_SERVER['REQUEST_URI'] == '/') {
     $Page = 'index';
@@ -21,6 +26,6 @@ else {
 
 if ($Page == 'index' and $Module == 'index')
     echo 'Главная страница';
-else if ($Page == 'photo')
-    echo 'Фотогалерея';
+else if ($Page == 'registr') include ('page/registr.php');
+else if ($Page == 'login') include  ('page/login.php');
 ?>
