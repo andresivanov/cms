@@ -24,8 +24,19 @@ else {
     }
 }
 
-if ($Page == 'index' and $Module == 'index')
-    echo 'Главная страница';
+if ($Page == 'index') include ('page/index.php');
 else if ($Page == 'registr') include ('page/registr.php');
 else if ($Page == 'login') include  ('page/login.php');
+
+function Head ($p1) {
+    echo '<html><head><meta charset="utf-8"><title>'.$p1.'</title><meta name="keywords" content=""><meta name="description" content=""><link href="/resource/style.css" rel="stylesheet"></head>';
+}
+
+function Menu () {
+    echo '<div><a href="/"><div class="Menu">Главная</div></a><a href="/registr"><div class="Menu">Регистрация</div></a><a href="/login"><div class="Menu">Вход</div></a></div>';
+}
+
+function Footer () {
+    echo '<footer class="footer">Mr.Shift Все права защищены - <a href="http://youtube.com" target="_blank">YouTube</a></footer>';
+}
 ?>
