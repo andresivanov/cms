@@ -25,18 +25,28 @@ else {
 }
 
 if ($Page == 'index') include ('page/index.php');
-else if ($Page == 'registr') include ('page/registr.php');
-else if ($Page == 'login') include  ('page/login.php');
+    else if ($Page == 'login') include  ('page/login.php');
+    else if ($Page == 'register') include ('page/register.php');
+    else if ($Page == 'account') include ('form/account.php');
 
-function Head ($p1) {
-    echo '<html><head><meta charset="utf-8"><title>'.$p1.'</title><meta name="keywords" content=""><meta name="description" content=""><link href="/resource/style.css" rel="stylesheet"></head>';
+function FormChars ($p1) {
+    return nl2br(htmlspecialchars(trim($p1), ENT_QUOTES), false);
 }
 
+function GenPass ($p1, $p2) {
+    return md5('MRSHIFT'.md5('321'.$p1.'123').md5('678'.$p2.'890'));
+}
+
+function Head($p1) {
+    echo '<!DOCTYPE html><html><head><meta charset="utf-8" /><title>'.$p1.'</title><meta name="keywords" content="" /><meta name="description" content="" /><link href="resource/style.css" rel="stylesheet"></head>';
+}
+
+
 function Menu () {
-    echo '<div><a href="/"><div class="Menu">Главная</div></a><a href="/registr"><div class="Menu">Регистрация</div></a><a href="/login"><div class="Menu">Вход</div></a></div>';
+    echo '<div class="MenuHead"><a href="/"><div class="Menu">Главная</div></a><a href="/register"><div class="Menu">Регистрация</div></a><a href="/login"><div class="Menu">Вход</div></a></div>';
 }
 
 function Footer () {
-    echo '<footer class="footer">Mr.Shift Все права защищены - <a href="http://youtube.com" target="_blank">YouTube</a></footer>';
+    echo '<footer class="footer">Mr.Shift - <a href="https://www.youtube.com/channel/UCpEWlcj5rkU1H9vkIf9Lb5g" target="blank">Мой канал на You Tube</a> - Пишем свой движок на PHP</footer>';
 }
 ?>
