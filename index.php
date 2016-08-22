@@ -3,9 +3,6 @@ include_once "settings.php";
 session_start();
 $CONNECT = mysqli_connect(HOST, USER, PASS, DB);
 
-/*if ($CONNECT) echo 'OK';
-    else echo 'ERROR';*/
-
 if ($_SERVER['REQUEST_URI'] == '/') {
     $Page = 'index';
     $Module = 'index';
