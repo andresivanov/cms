@@ -47,6 +47,6 @@ function Menu () {
 }
 
 function Footer () {
-    echo '<footer class="footer">Mr.Shift - <a href="https://www.youtube.com/channel/UCpEWlcj5rkU1H9vkIf9Lb5g" target="blank">Мой канал на You Tube</a> - Пишем свой движок на PHP</footer>';
+    echo '<footer class="footer">Mr.Shift - <a href="sioce.ml" target="blank">SIOCE.ml</a></footer>';
 }
 ?>
