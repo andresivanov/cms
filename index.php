@@ -21,6 +21,20 @@ else {
     }
 }
 
+function MessageSend($p1, $p2) {
+    if ($p1 == 1) $p1 = 'Ошибка';
+    else if ($p1 == 2) $p1 = 'Подсказка';
+    else if ($p1 == 3) $p1 = 'Информация';
+    $_SESSION['message'] = '<div class="MessageBlock"><b>'.$p1.'</b>: '.$p2.'</div>';
+    exit (header('Location: '.$_SERVER['HTTP_REFERER'].''));
+}
+
+function MessageShow() {
+    if ($_SESSION['message']) $Message = $_SESSION['message'];
+    echo $Message;
+    $_SESSION['message'] = array();
+}
+
 if ($Page == 'index') include ('page/index.php');
     else if ($Page == 'login') include  ('page/login.php');
     else if ($Page == 'register') include ('page/register.php');
@@ -37,7 +51,6 @@ function GenPass ($p1, $p2) {
 function Head($p1) {
     echo '<!DOCTYPE html><html><head><meta charset="utf-8" /><title>'.$p1.'</title><meta name="keywords" content="" /><meta name="description" content="" /><link href="resource/style.css" rel="stylesheet"></head>';
 }
-
 
 function Menu () {
     echo '<div class="MenuHead"><a href="/"><div class="Menu">Главная</div></a><a href="/register"><div class="Menu">Регистрация</div></a><a href="/login"><div class="Menu">Вход</div></a></div>';

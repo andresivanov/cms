@@ -16,3 +16,5 @@ select {height:30px; margin-bottom: 5px;}
 .Page {padding: 20px}
 
 .footer {height: 10px; background: #35886E; padding: 20px; color: #fff}
+
+.MessageBlock {border: 1px solid #a83b2d; background: #d44b38; padding: 10px; color: white}

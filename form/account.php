@@ -9,7 +9,7 @@ if ($Module == 'register' and $_POST['enter']) {
     $_POST['avatar'] = 0;
 
     if (!$_POST['login'] or !$_POST['email'] or !$_POST['password'] or !$_POST['name'] or $_POST['country'] > 4)
-        exit ('Ошибка валидации формы');
+        MessageSend(1, 'Ошибка валидации формы');
 
 
     $Row = mysqli_fetch_assoc(mysqli_query($CONNECT, "SELECT login FROM users WHERE login = '$_POST[login]'"));

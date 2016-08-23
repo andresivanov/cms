@@ -1,9 +1,14 @@
-<?php Head('Регистрация') ?>
+<?php
+    Head('Регистрация');
+?>
 <body>
 <div class="wrapper">
     <div class="header"></div>
     <div class="content">
-        <?php Menu() ?>
+        <?php
+            Menu();
+            MessageShow();
+        ?>
         <div class="Page">
             <form method="POST" action="/account/register">
                 <br><input type="text" name="login" placeholder="Логин">
@@ -19,6 +24,7 @@
                     <option value="4">Канада</option>
                 </select>
                 <br><input type="file" name="avatar">
+                <br><img src="/resource/captcha.php" alt="Капча">
                 <br><br><input type="submit" name="enter" value="Регистрация"> <input type="reset" value="Очистить">
             </form>
         </div>
