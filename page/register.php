@@ -24,7 +24,7 @@
                     <option value="4">Канада</option>
                 </select>
                 <br><input type="file" name="avatar">
-                <br><img src="/resource/captcha.php" alt="Капча">
+                <br><input type="text" name="captcha" placeholder="Капча" required><img src="/resource/captcha.php" alt="Капча">
                 <br><br><input type="submit" name="enter" value="Регистрация"> <input type="reset" value="Очистить">
             </form>
         </div>

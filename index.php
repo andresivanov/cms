@@ -57,6 +57,6 @@ function Menu () {
 }
 
 function Footer () {
-    echo '<footer class="footer">Mr.Shift - <a href="sioce.ml" target="blank">SIOCE.ml</a></footer>';
+    echo '<footer class="footer">Mr.Shift - <a href="http://sioce.ml">SIOCE.ml</a></footer>';
 }
 ?>
